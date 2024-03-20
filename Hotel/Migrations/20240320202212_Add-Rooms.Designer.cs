@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Hotel.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20240320095805_Add-Rooms")]
+    [Migration("20240320202212_Add-Rooms")]
     partial class AddRooms
     {
         /// <inheritdoc />
@@ -34,6 +34,10 @@ namespace Hotel.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("RoomType")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("TakenRoom")
                         .IsRequired()
                         .HasColumnType("longtext");
 
