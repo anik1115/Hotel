@@ -12,9 +12,13 @@
 
         public int Price { get; set; }
 
+        public RoomViewModel()
+        {
+        }
+
         public RoomViewModel(int id, int number, string type, string rentability, int price)
         {
-            Id = id;
+            Id = Id;
             Number = number;
             Type = type;
             Rentability = rentability;

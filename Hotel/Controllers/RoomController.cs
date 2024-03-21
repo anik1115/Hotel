@@ -16,7 +16,7 @@ namespace Hotel.Controllers
         {
             var rooms = roomService.GetAll();
             
-            return View();
+            return View(rooms);
         }
 
         public IActionResult Create()

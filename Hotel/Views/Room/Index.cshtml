@@ -3,6 +3,7 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
+    ViewData["Title"] = "Rooms";
 }
 
 @model IEnumerable<RoomViewModel>
@@ -15,7 +16,7 @@
             <th>Number</th>
             <th>Type</th>
             <th>Rentability</th>
-         <th>Price</th>
+            <th>Price</th>
       </tr>
     </thead>
 
@@ -23,10 +24,10 @@
       @foreach (var room in Model)
       {
         <tr>
-            <th>Number: @room.Number</th>
-            <th>Type: @room.Type</th>
-            <th>Rentability: @room.Rentability</th>
-            <th>Price: @room.Price</th>
+            <th>@room.Number</th>
+            <th>@room.Type</th>
+            <th>@room.Rentability</th>
+            <th>@room.Price</th>
         </tr>
       }
     </tbody>

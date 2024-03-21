@@ -25,8 +25,7 @@ namespace Hotel.Services
         {
             var roomEntities = roomRepository.GetAll();
 
-            var rooms = roomEntities
-                .Select(room => new RoomViewModel(room.Id, room.Number, room.Type, room.Rentability, room.Price));
+            var rooms = roomEntities.Select(room => new RoomViewModel(room.Id, room.Number, room.Type, room.Rentability, room.Price));
 
             return rooms;
         }

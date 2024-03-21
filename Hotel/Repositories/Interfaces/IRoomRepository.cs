@@ -7,5 +7,6 @@ namespace Hotel.Repositories.Interfaces
         void Add(Room room);
 
         IEnumerable<Room> GetAll();
+
     }
 }

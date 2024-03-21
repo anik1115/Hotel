@@ -5,11 +5,8 @@ namespace Hotel.Services.Interfaces
 {
     public interface IRoomService
     {
-        public void Add(CreateRoomViewModel room)
-        {
-             throw new NotImplementedException();
-        }
-
+        void Add(CreateRoomViewModel room);
         IEnumerable<RoomViewModel> GetAll();
+        
     }
 }
