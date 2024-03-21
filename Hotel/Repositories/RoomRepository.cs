@@ -21,6 +21,18 @@ namespace Hotel.Repositories
 
         public IEnumerable<Room> GetAll()
             => context.Rooms.ToList();
+
         
+        public void Delete(int id)
+        {
+            var room = Get(id);
+
+            context.Rooms.Remove(room);
+            context.SaveChanges();
+        }
+
+        private Room Get(int id)
+            => context.Rooms.FirstOrDefault(room => room.Id == id);
+
     }
 }

@@ -12,6 +12,7 @@ namespace Hotel.Controllers
         {
             this.roomService = roomService;
         }
+
         public IActionResult Index()
         {
             var rooms = roomService.GetAll();
@@ -28,6 +29,13 @@ namespace Hotel.Controllers
         public IActionResult Create(CreateRoomViewModel room)
         {
             roomService.Add(room);
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        public IActionResult Delete(int id)
+        {
+            roomService.Delete(id);
 
             return RedirectToAction(nameof(Index));
         }

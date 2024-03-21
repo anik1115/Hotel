@@ -8,5 +8,6 @@ namespace Hotel.Repositories.Interfaces
 
         IEnumerable<Room> GetAll();
 
+        void Delete(int id);
     }
 }

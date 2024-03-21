@@ -29,5 +29,8 @@ namespace Hotel.Services
 
             return rooms;
         }
+
+        public void Delete(int id)
+                => roomRepository.Delete(id);
     }
 }

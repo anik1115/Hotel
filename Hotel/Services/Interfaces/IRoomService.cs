@@ -7,6 +7,7 @@ namespace Hotel.Services.Interfaces
     {
         void Add(CreateRoomViewModel room);
         IEnumerable<RoomViewModel> GetAll();
-        
+
+        void Delete(int id);
     }
 }

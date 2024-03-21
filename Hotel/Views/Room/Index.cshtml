@@ -17,6 +17,7 @@
             <th>Type</th>
             <th>Rentability</th>
             <th>Price</th>
+            <th>Actions</th>
       </tr>
     </thead>
 
@@ -28,6 +29,16 @@
             <th>@room.Type</th>
             <th>@room.Rentability</th>
             <th>@room.Price</th>
+            <th>
+                <button>
+                        <a 
+                            asp-controller="Room" 
+                            asp-action="Delete" 
+                            asp-route-id="@room.Id">
+                            Delete
+                        </a>
+                </button>
+            </th>
         </tr>
       }
     </tbody>
