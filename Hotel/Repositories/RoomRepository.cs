@@ -18,5 +18,9 @@ namespace Hotel.Repositories
             context.Rooms.Add(room);
             context.SaveChanges();
         }
+
+        public IEnumerable<Room> GetAll()
+            => context.Rooms.ToList();
+        
     }
 }

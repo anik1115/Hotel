@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Hotel.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20240320202212_Add-Rooms")]
+    [Migration("20240320235410_Add-Rooms")]
     partial class AddRooms
     {
         /// <inheritdoc />
@@ -27,17 +27,17 @@ namespace Hotel.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    b.Property<int>("Number")
+                        .HasColumnType("int");
+
                     b.Property<int>("Price")
                         .HasColumnType("int");
 
-                    b.Property<int>("RoomNumber")
-                        .HasColumnType("int");
-
-                    b.Property<string>("RoomType")
+                    b.Property<string>("Rentability")
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<string>("TakenRoom")
+                    b.Property<string>("Type")
                         .IsRequired()
                         .HasColumnType("longtext");
 

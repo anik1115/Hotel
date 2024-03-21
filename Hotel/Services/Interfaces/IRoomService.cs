@@ -1,4 +1,5 @@
-﻿using Hotel.Models;
+﻿using Hotel.Data.Entities;
+using Hotel.Models.Room;
 
 namespace Hotel.Services.Interfaces
 {
@@ -8,5 +9,7 @@ namespace Hotel.Services.Interfaces
         {
              throw new NotImplementedException();
         }
+
+        IEnumerable<RoomViewModel> GetAll();
     }
 }

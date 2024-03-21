@@ -24,17 +24,17 @@ namespace Hotel.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    b.Property<int>("Number")
+                        .HasColumnType("int");
+
                     b.Property<int>("Price")
                         .HasColumnType("int");
 
-                    b.Property<int>("RoomNumber")
-                        .HasColumnType("int");
-
-                    b.Property<string>("RoomType")
+                    b.Property<string>("Rentability")
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<string>("TakenRoom")
+                    b.Property<string>("Type")
                         .IsRequired()
                         .HasColumnType("longtext");
 

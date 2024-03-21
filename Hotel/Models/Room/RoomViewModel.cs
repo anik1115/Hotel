@@ -1,26 +1,20 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace Hotel.Data.Entities
+﻿namespace Hotel.Models.Room
 {
-    public class Room
+    public class RoomViewModel
     {
-        [Key]
         public int Id { get; set; }
 
-        [Required]
         public int Number { get; set; }
 
-        [Required]
         public string Type { get; set; }
 
-        [Required]
         public string Rentability { get; set; }
 
-        [Required]
         public int Price { get; set; }
 
-        public Room(int number, string type, string rentability, int price)
+        public RoomViewModel(int id, int number, string type, string rentability, int price)
         {
+            Id = id;
             Number = number;
             Type = type;
             Rentability = rentability;

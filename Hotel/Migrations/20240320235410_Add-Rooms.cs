@@ -20,9 +20,9 @@ namespace Hotel.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
-                    RoomNumber = table.Column<int>(type: "int", nullable: false),
-                    RoomType = table.Column<string>(type: "longtext", nullable: false),
-                    TakenRoom = table.Column<string>(type: "longtext", nullable: false),
+                    Number = table.Column<int>(type: "int", nullable: false),
+                    Type = table.Column<string>(type: "longtext", nullable: false),
+                    Rentability = table.Column<string>(type: "longtext", nullable: false),
                     Price = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
