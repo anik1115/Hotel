@@ -1,4 +1,5 @@
 ﻿using Hotel.Data.Entities;
+using Hotel.Models.Room;
 
 namespace Hotel.Repositories.Interfaces
 {
@@ -9,5 +10,9 @@ namespace Hotel.Repositories.Interfaces
         IEnumerable<Room> GetAll();
 
         void Delete(int id);
+
+        void Edit(Room room);
+
+        Room Get(int id);
     }
 }

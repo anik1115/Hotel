@@ -33,6 +33,14 @@
                 <button>
                         <a 
                             asp-controller="Room" 
+                            asp-action="Edit" 
+                            asp-route-id="@room.Id">
+                            Edit
+                        </a>
+                </button>
+                <button>
+                        <a 
+                            asp-controller="Room" 
                             asp-action="Delete" 
                             asp-route-id="@room.Id">
                             Delete

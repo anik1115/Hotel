@@ -19,12 +19,20 @@ namespace Hotel.Data.Entities
         [Required]
         public int Price { get; set; }
 
+        public Room() 
+        { }
         public Room(int number, string type, string rentability, int price)
         {
             Number = number;
             Type = type;
             Rentability = rentability;
             Price = price;
+        }
+
+        public Room(int id, int number, string type, string rentability, int price)
+            : this(number, type, rentability, price)
+        {
+            Id = id;
         }
     }
 }

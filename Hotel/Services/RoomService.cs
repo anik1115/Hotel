@@ -30,6 +30,19 @@ namespace Hotel.Services
             return rooms;
         }
 
+        public RoomViewModel Get(int id)
+                {
+            var room = roomRepository.Get(id);
+
+            return new RoomViewModel(room.Id, room.Number, room.Type, room.Rentability, room.Price);
+        }
+        public void Edit(EditRoomViewModel room)
+        {
+            var roomEntity = new Room(room.Id, room.Number, room.Type, room.Rentability, room.Price);
+
+            roomRepository.Edit(roomEntity);
+        }
+
         public void Delete(int id)
                 => roomRepository.Delete(id);
     }

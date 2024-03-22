@@ -31,7 +31,19 @@ namespace Hotel.Repositories
             context.SaveChanges();
         }
 
-        private Room Get(int id)
+        public void Edit(Room room)
+        {
+            var entity = Get(room.Id);
+
+            entity.Number = room.Number;
+            entity.Type = room.Type;
+            entity.Rentability = room.Rentability;
+            entity.Price = room.Price;
+
+            context.SaveChanges();
+        }
+
+        public Room Get(int id)
             => context.Rooms.FirstOrDefault(room => room.Id == id);
 
     }

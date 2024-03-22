@@ -1,0 +1,33 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<h2>Edit Product</h2>
+
+<form method="post" asp-controller="Room" asp-action="Edit" asp-route-id="@Model.Id">
+    <p>
+        <label>Number</label>
+        <input type="number" name="number" value="@Model.Number"/>
+    </p>
+
+    <p>
+        <label>Type</label>
+        <input type="text" name="type" value="@Model.Type"/>
+    </p>
+
+    <p>
+        <label>Rentability</label>
+        <input type="text" name="rentability" value="@Model.Rentability"/>
+    </p>
+
+    <p>
+        <label>Price</label>
+        <input type="number" name="price" value="@Model.Price"/>
+    </p>
+
+    <button type="submit">Edit</button>
+
+    <button asp-controller="Room" asp-action="Index">Cancel</button>
+</form>

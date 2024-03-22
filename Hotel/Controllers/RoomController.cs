@@ -1,4 +1,5 @@
 ﻿using Hotel.Models.Room;
+using Hotel.Services;
 using Hotel.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
@@ -36,6 +37,22 @@ namespace Hotel.Controllers
         public IActionResult Delete(int id)
         {
             roomService.Delete(id);
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        public IActionResult Edit(int id)
+        {
+            var room = roomService.Get(id);
+
+            return View(room);
+        }
+
+        [HttpPost]
+
+        public IActionResult Edit(EditRoomViewModel room)
+        {
+            roomService.Edit(room);
 
             return RedirectToAction(nameof(Index));
         }

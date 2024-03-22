@@ -9,5 +9,9 @@ namespace Hotel.Services.Interfaces
         IEnumerable<RoomViewModel> GetAll();
 
         void Delete(int id);
+
+        void Edit(EditRoomViewModel room);
+
+        RoomViewModel Get(int id);
     }
 }
